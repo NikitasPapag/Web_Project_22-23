@@ -4,6 +4,7 @@
 
 if (isset($_POST['submit'])) {
 	
+	$uid = $_POST['uid'];
 	$name = $_POST['name'];
 	$email = $_POST['email'];
 	$username = $_POST['username'];
