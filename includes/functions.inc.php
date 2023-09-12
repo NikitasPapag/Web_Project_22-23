@@ -132,3 +132,34 @@ function loginUser($conn, $username, $password) {
 		exit();
 	}
 }
+
+
+function showStoresOnMap() {
+    // Make an HTTP GET request to "api.php?g=7"
+    $response = file_get_contents("api.php?g=7");
+
+    if ($response !== false) {
+        // Parse the JSON response into an array
+        $stores = json_decode($response, true);
+
+        if ($stores !== null) {
+            // Call the PHP function to display store markers on the map
+            storeMarkers($stores);
+        }
+    }
+}
+
+function showDiscountStoresOnMap() {
+    // Make an HTTP GET request to "api.php?g=8"
+    $response = file_get_contents("api.php?g=8");
+
+    if ($response !== false) {
+        // Parse the JSON response into an array
+        $discountStores = json_decode($response, true);
+
+        if ($discountStores !== null) {
+            // Call the PHP function to display discount store markers on the map
+            discountStoreMarkers($discountStores);
+        }
+    }
+}
