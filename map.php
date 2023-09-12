@@ -42,19 +42,42 @@
 	var controlSearch = new L.Control.Search({
 		position:'topright',
 		layer: markersLayer,
+		propertyName: "name",
 		initial: false,
 		zoom: 18,
 		marker: false
 	});
 	map.addControl( controlSearch );
 	////////////populate map with markers from sample data
-	for(i in data) {
-		var title = data[i].title,	//value searched
-			loc = data[i].loc,		//position found
-			marker = new L.Marker(new L.latLng(loc), {title: title} );//se property searched
-		marker.bindPopup('title: '+ title );
-		markersLayer.addLayer(marker);
-	}
+function storeMarkers(stores) {
+  for (i in stores) {
+    let name = stores[i].name;
+    let marker = L.marker(
+      L.latLng([stores[i].latitude, stores[i].longtitude]),
+      {
+        name: name,
+        icon: greenIcon,
+      }
+    );
+    marker.bindPopup("<b>" + name + "</b>");
+    marker.addTo(markersLayer);
+  }
+}
+
+function discountStoreMarkers(discountStores) {
+  for (i in discountStores) {
+    let name = discountStores[i].name;
+    let marker = L.marker(
+      L.latLng([discountStores[i].latitude, discountStores[i].longtitude]),
+      {
+        name: name,
+        icon: orangeIcon,
+      }
+    );
+    marker.bindPopup("<b>" + name + "</b>");
+    marker.addTo(markersLayer);
+  }
+}
 </script>
 </body>
 </html>
