@@ -16,7 +16,7 @@
 	<body>
 		<nav>
 			<div class="wrapper">
-				<a href="index.php"><img class="logo-png" src="img/logo.png" alt="Project logo"></a>
+				<a href="index.php"><img class="logo-png" src="logo.png" alt="Project logo"></a>
 					<ul>
 						<li><a href="index.php">Αρχική</a></li>
 
