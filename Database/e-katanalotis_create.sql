@@ -2,10 +2,11 @@ DROP DATABASE IF EXISTS `e-katanalotis`;
 CREATE DATABASE `e-katanalotis`;
 USE `e-katanalotis`;
 
-CREATE TABLE `User` (
-  `username` varchar(255) PRIMARY KEY,
-  `password` varchar(255),
-  `email` varchar(255),
+CREATE TABLE `Users` (
+  `idUsers` int(11) AUTO_INCREMENT PRIMARY KEY NOT NULL,
+  `uidUsers` varchar(255) PRIMARY KEY,
+  `passwordUsers` varchar(255),
+  `emailUsers` varchar(255),
   `is_manager` bit DEFAULT 0,
   `score` integer DEFAULT 0,
   `balance` integer DEFAULT 0
