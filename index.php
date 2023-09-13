@@ -12,7 +12,7 @@
 	?>
 
 	<div class="map-index">
-		<a href="mappage.php"><img src="img/map-logo.png" alt="Map logo"></a>
+		<a href="mappage.php"><img src="map-logo.png" alt="Map logo"></a>
 		<h2>Πατήστε πάνω στον χάρτη για να περιηγηθείτε στα καταστήματα super-market που βρίσκονται κοντά σας.</h2>
 	</div>
 
