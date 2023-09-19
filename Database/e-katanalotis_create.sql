@@ -3,10 +3,11 @@ CREATE DATABASE `e-katanalotis`;
 USE `e-katanalotis`;
 
 CREATE TABLE `Users` (
-  `idUsers` int(11) AUTO_INCREMENT PRIMARY KEY NOT NULL,
-  `uidUsers` varchar(255) PRIMARY KEY,
-  `passwordUsers` varchar(255),
-  `emailUsers` varchar(255),
+  `usersId` int(11) AUTO_INCREMENT PRIMARY KEY NOT NULL,
+  `usersName` varchar(255) PRIMARY KEY,
+  `usersUsername` varchar(255),
+  `usersPassword` varchar(255),
+  `usersEmail` varchar(255),
   `is_manager` bit DEFAULT 0,
   `score` integer DEFAULT 0,
   `balance` integer DEFAULT 0
@@ -22,7 +23,7 @@ CREATE TABLE `Store` (
 
 CREATE TABLE `Discount` (
   `id` integer PRIMARY KEY,
-  `username` varchar(255),
+  `usersUsername` varchar(255),
   `product` integer,
   `price` float,
   `date` date,
@@ -30,7 +31,7 @@ CREATE TABLE `Discount` (
 );
 
 CREATE TABLE `Reaction` (
-  `username` varchar(255) PRIMARY KEY,
+  `usersUsername` varchar(255) PRIMARY KEY,
   `discount` integer,
   `liked` bit DEFAULT 0,
   `disliked` bit DEFAULT 0,
@@ -61,7 +62,7 @@ CREATE TABLE `Price` (
 
 CREATE TABLE `Score_History` (
   `id` integer PRIMARY KEY,
-  `username` varchar(255),
+  `usersUsername` varchar(255),
   `current_score` integer COMMENT 'This is the score of the month stated in the field "date".',
   `total_score` integer COMMENT 'This is the sum of the score of all of the previous months, before the month stated at the field "date".',
   `date` date
@@ -69,7 +70,7 @@ CREATE TABLE `Score_History` (
 
 CREATE TABLE `Token_History` (
   `id` integer PRIMARY KEY,
-  `username` varchar(255),
+  `usersUsername` varchar(255),
   `tokens_given` integer COMMENT 'These are the tokens given to the user (stated in "username") for the month stated in the field "date".',
   `total_tokens` integer COMMENT 'This is the token total of the user (stated in "username") up to the previous month of the one stated in the field "date".',
   `date` date
@@ -93,13 +94,13 @@ ALTER TABLE `Score_History` COMMENT = 'This table keeps a record of the score of
 
 ALTER TABLE `Token_History` COMMENT = 'This table keeps a record of the tokens of each user.';
 
-ALTER TABLE `Discount` ADD FOREIGN KEY (`username`) REFERENCES `User` (`username`);
+ALTER TABLE `Discount` ADD FOREIGN KEY (`usersUsername`) REFERENCES `User` (`usersUsername`);
 
 ALTER TABLE `Discount` ADD FOREIGN KEY (`product`) REFERENCES `Product` (`id`);
 
 ALTER TABLE `Discount` ADD FOREIGN KEY (`store`) REFERENCES `Store` (`id`);
 
-ALTER TABLE `Reaction` ADD FOREIGN KEY (`username`) REFERENCES `User` (`username`);
+ALTER TABLE `Reaction` ADD FOREIGN KEY (`usersUsername`) REFERENCES `User` (`usersUsername`);
 
 ALTER TABLE `Reaction` ADD FOREIGN KEY (`discount`) REFERENCES `Discount` (`id`);
 
@@ -111,6 +112,6 @@ ALTER TABLE `Price` ADD FOREIGN KEY (`product_id`) REFERENCES `Product` (`id`);
 
 ALTER TABLE `Price` ADD FOREIGN KEY (`store_id`) REFERENCES `Store` (`id`);
 
-ALTER TABLE `Score_History` ADD FOREIGN KEY (`username`) REFERENCES `User` (`username`);
+ALTER TABLE `Score_History` ADD FOREIGN KEY (`usersUsername`) REFERENCES `User` (`usersUsername`);
 
-ALTER TABLE `Token_History` ADD FOREIGN KEY (`username`) REFERENCES `User` (`username`);
+ALTER TABLE `Token_History` ADD FOREIGN KEY (`usersUsername`) REFERENCES `User` (`usersUsername`);
