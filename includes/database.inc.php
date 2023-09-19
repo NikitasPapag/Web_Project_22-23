@@ -3,7 +3,7 @@
 $serverName = "localhost";
 $databaseUsername = "root";
 $databasePassword = '';
-$databaseName = "project";
+$databaseName = "e-katanalotis";
 
 $conn = mysqli_connect($serverName, $databaseUsername, $databasePassword, $databaseName);
 
