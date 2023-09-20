@@ -5,7 +5,7 @@
 	<div class="profile-index">
 		<h3>Στη σελίδα αυτή μπορείτε να δείτε μια σύνοψη του προσωπικού σας προφίλ και να το επεξεργαστείτε όπως επιθυμείτε.</h3>
 
-		<a href="mappage.php"><img src="blank_profile.png" alt="Blank profile picture"></a>
+		<img src="blank_profile.png" alt="Blank profile picture"></a>
 	</div>
 
 	</section>
