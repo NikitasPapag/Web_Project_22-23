@@ -3,13 +3,7 @@
 ?>
 
 	<ul class="menu-member">
-		<?php
-			if(isset($_SESSION["userid"]))
-			{
-		
-			<li><a href="includes/logout.inc.php" class="header-login-a">LOGOUT</a></li>
-			}
-		?>	
+	
 		
 	<section class="map-page">
 		<h1>Χάρτης Καταστημάτων</h1>
