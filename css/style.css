@@ -125,6 +125,14 @@ h2 {
 	float: left;
 }
 
+h3 {
+	font-weight: 600;
+	font-size: 20px;
+	padding: 40px 0;
+	text-align: left;
+	float: left;
+}
+
 p {
 
 	font-size: 22px;
