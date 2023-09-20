@@ -4,6 +4,8 @@
 
 	<div class="profile-index">
 		<h3>Στη σελίδα αυτή μπορείτε να δείτε μια σύνοψη του προσωπικού σας προφίλ και να το επεξεργαστείτε όπως επιθυμείτε.</h3>
+
+		<a href="mappage.php"><img src="map-logo.png" alt="Map logo"></a>
 	</div>
 
 	</section>
