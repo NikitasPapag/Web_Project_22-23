@@ -135,8 +135,7 @@ function loginUser($conn, $username, $password) {
 
 
 function showStoresOnMap() {
-    // Make an HTTP GET request to "api.php?g=7"
-    $response = file_get_contents("api.php?g=7");
+    $response = file_get_contents();
 
     if ($response !== false) {
         // Parse the JSON response into an array
@@ -150,8 +149,7 @@ function showStoresOnMap() {
 }
 
 function showDiscountStoresOnMap() {
-    // Make an HTTP GET request to "api.php?g=8"
-    $response = file_get_contents("api.php?g=8");
+    $response = file_get_contents();
 
     if ($response !== false) {
         // Parse the JSON response into an array
