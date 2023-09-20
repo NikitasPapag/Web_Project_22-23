@@ -195,15 +195,9 @@ VALUES
 
 INSERT INTO User
 VALUES 
-("iloudaros", "kokoko123!", "contact@iloudaros.gr", 0, 100, 100),
-("psergiannis", "kikiki123!", "contact@psergiannis.gr", 0, 100, 100),
-("ckoutou", "kekeke123!", "contact@ckoutou.gr", 0, 100, 100);
 
 
 
 
 INSERT INTO Discount
 VALUES 
-(0, "ckoutou", 0, 1.00, "2023-01-12", 4),
-(1, "psergiannis", 5, 2.00, "2023-01-12", 1),
-(2, "iloudaros", 25, 16.00, "2023-01-12", 3);
