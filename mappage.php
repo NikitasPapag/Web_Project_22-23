@@ -7,7 +7,6 @@
 			if(isset($_SESSION["userid"]))
 			{
 		
-			<li><a href="profile.php"><?php echo $_SESSION["useruid"]; ?></a></li>
 			<li><a href="includes/logout.inc.php" class="header-login-a">LOGOUT</a></li>
 			}
 		?>	
